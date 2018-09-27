@@ -1,6 +1,6 @@
 const Eos = require('eosjs');
 const eosecc = require('eosjs-ecc');
-const config = require('./config');
+// const config = require('./config');
 // https://github.com/cryptocoinjs/bs58
 const bs58 = require('bs58');
 
@@ -10,7 +10,7 @@ scripts = {
 
 		// params sig & hash are strings 
 		const recoverKey = eosecc.recoverHash(sig, Buffer.from(seed, 'hex'));
-		console.log("Keys are matching: ", "EOS6ESzwoxB1F3VLWVfy1VUyLzBjjFGB9nB2YUX5F9PkvhPwQUTgg" == recoverKey);
+		console.log("Keys are matching: ", "EOS5MexJExCsLwm29DbSFcVFiTECGHJLoNLmSmsd118NAhRMcSqxF" == recoverKey);
 
 		tempSig = sig.substring(7);
 		bytes = bs58.decode(tempSig);
